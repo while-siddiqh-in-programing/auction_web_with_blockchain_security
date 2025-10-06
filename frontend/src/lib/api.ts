@@ -1,5 +1,7 @@
 // API service for connecting to the backend auction system
-const API_BASE_URL = 'http://localhost:8080/api';
+// The backend was changed to run on port 8081 in `application.properties`.
+// Keep this simple for development; consider using Vite env vars (VITE_API_URL) later.
+const API_BASE_URL = 'http://localhost:8081/api';
 
 export interface Auction {
   id: string;
