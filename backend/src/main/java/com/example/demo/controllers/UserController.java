@@ -3,6 +3,8 @@ package com.example.demo.controllers;
 import com.example.demo.model.User;
 import com.example.demo.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,13 +15,18 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     // Register a new user
     @PostMapping("/register")
     public RegisterResponse registerUser(@RequestBody User user) {
+        logger.info("Register endpoint called: username='{}', email='{}'", user.getUsername(), user.getEmail());
         try {
             User createdUser = userService.registerUser(user);
+            logger.info("User created: id='{}', username='{}'", createdUser.getId(), createdUser.getUsername());
             return new RegisterResponse(true, "Registration successful", createdUser);
         } catch (RuntimeException e) {
+            logger.warn("Registration failed for username='{}': {}", user.getUsername(), e.getMessage());
             return new RegisterResponse(false, e.getMessage(), null);
         }
     }
