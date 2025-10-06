@@ -1,0 +1,5 @@
+_id,title,description,imageUrl,auctionId,startingPrice,duration,_class
+68c8e7dc08626f5a0a0e3a4f,Vintage Camera,Classic film camera in working condition.,https://example.com/vintage-camera.jpg,1757997020374,2100,5000000,com.example.demo.model.Auction
+68c8e7dc08626f5a0a0e3a50,Antique Vase,Porcelain vase from the 18th century.,https://example.com/antique-vase.jpg,1757997020375,5000,7000000,com.example.demo.model.Auction
+68c8e7dc08626f5a0a0e3a51,Luxury Watch,Swiss-made automatic wristwatch.,https://example.com/luxury-watch.jpg,1757997020376,12000,9000000,com.example.demo.model.Auction
+68c8e7dc08626f5a0a0e3a52,Rare Book,First edition classic literature book.,https://example.com/rare-book.jpg,1757997020377,800,4000000,com.example.demo.model.Auction
