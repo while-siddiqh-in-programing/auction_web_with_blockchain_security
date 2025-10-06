@@ -1,0 +1,2 @@
+# No Python dependencies required for this project.
+# The backend is Java (Maven) and the frontend is Node.js (npm).

@@ -1,0 +1,6 @@
+Add this header to new files:
+
+/*
+ * Auction Web with Blockchain Security
+ * Copyright (c) 2025
+ */
